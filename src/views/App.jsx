@@ -6,14 +6,10 @@ import '../sass/main.scss'
 // API import
 import fetchData from '../fetchData.js'
 
-export class App extends React.Component {
+// Components import
+import { Routes } from '../views/Routes.jsx'
 
-  constructor(props) {
-    super(props)
-    this.state = {
-        data: {}
-    }
-  }
+export class App extends React.Component {
 
   componentDidMount() {
     fetchData(12, 'performance').then(data => {
@@ -24,7 +20,7 @@ export class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <p>Hello Sport See !</p>
+        <Routes />
       </div>
     )
   }
