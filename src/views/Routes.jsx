@@ -6,6 +6,7 @@ import { Error404 } from '../views/Error404.jsx'
 
 // Components import
 import { Header } from '../components/header/Header.jsx'
+import { VerticalNavbar } from '../components/vertical_navbar/VerticalNavbar.jsx'
 
 export class Routes extends React.Component {
 
@@ -14,6 +15,7 @@ export class Routes extends React.Component {
             <>
             <Router>
                 <Header/>
+                <VerticalNavbar/>
                 <Switch>
                     <Route path="/" exact></Route>
                     <Route path="/" component={Error404}></Route>
