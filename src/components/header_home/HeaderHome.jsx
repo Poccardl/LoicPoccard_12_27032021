@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 export class HeaderHome extends React.Component {
 
@@ -10,4 +11,8 @@ export class HeaderHome extends React.Component {
             </>
         )
     }
+}
+
+HeaderHome.propTypes = {
+    firstName: PropTypes.string
 }
