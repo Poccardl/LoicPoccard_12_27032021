@@ -3,6 +3,8 @@ body {
 }
 .App {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 a {
     text-decoration: none;

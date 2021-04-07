@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 // Views import
+import { Home } from './home/Home.jsx'
 import { Error404 } from '../views/Error404.jsx'
 
 // Components import
@@ -17,7 +18,7 @@ export class Routes extends React.Component {
                 <Header/>
                 <VerticalNavbar/>
                 <Switch>
-                    <Route path="/" exact></Route>
+                    <Route path="/" exact component={Home}></Route>
                     <Route path="/" component={Error404}></Route>
                 </Switch>
             </Router>
