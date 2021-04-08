@@ -23,7 +23,7 @@ export class ActivityChart extends React.Component {
     render() {
         return (
             <>
-            <div className="daily_chart">
+            <div className="activity_chart">
                 <h2>Acitvité quotidienne</h2>
                 <ResponsiveContainer width="100%" height="100%">
                     <BarChart data={this.props.sessions} barGap={5} barCategoryGap={25} strokeDasharray="3 3">
