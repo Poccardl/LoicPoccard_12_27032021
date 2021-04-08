@@ -6,6 +6,7 @@ import fetchData from '../../fetchData.js'
 // Components import
 import { HeaderHome } from '../../components/header_home/HeaderHome.jsx'
 import { ActivityChart } from '../../components/activity_chart/ActivityChart.jsx'
+import { AverageDuration } from '../../components/average_duration_chart/AverageDuration.jsx'
 
 export class Home extends React.Component {
 
@@ -15,7 +16,9 @@ export class Home extends React.Component {
             firstName: null,
             firstNameIsLoading: false,
             sessions: null,
-            sessionsIsLoading: false
+            sessionsIsLoading: false,
+            average: null,
+            averageIsLoading: false
         }
     }
 
@@ -26,6 +29,9 @@ export class Home extends React.Component {
         fetchData(12, "activity").then(data => {
              this.setState({sessions: data.sessions, sessionsIsLoading: true})
         })
+        fetchData(12, "average-sessions").then(data => {
+             this.setState({average: data.sessions, averageIsLoading: true})
+        })
       }
 
     render() {
@@ -34,6 +40,7 @@ export class Home extends React.Component {
             <section className="home">
                 {this.state.firstNameIsLoading ? <HeaderHome firstName={this.state.firstName}/> : ""}
                 {this.state.sessionsIsLoading ? <ActivityChart sessions={this.state.sessions}/> : ""}
+                {this.state.averageIsLoading ? <AverageDuration average={this.state.average}/> : ""}
             </section>
             </>
         )
