@@ -4,10 +4,9 @@ import PropTypes from 'prop-types'
 export class HeaderHome extends React.Component {
 
     render() {
-        console.log("firstName", this.props.firstName)
         return (
             <>
-            <p>Bonjour {this.props.firstName}</p>
+            <h1>Bonjour {this.props.firstName}</h1>
             </>
         )
     }

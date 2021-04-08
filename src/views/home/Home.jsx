@@ -5,20 +5,26 @@ import fetchData from '../../fetchData.js'
 
 // Components import
 import { HeaderHome } from '../../components/header_home/HeaderHome.jsx'
+import { ActivityChart } from '../../components/dayli_chart/ActivityChart.jsx'
 
 export class Home extends React.Component {
 
     constructor(props) {
         super(props)
         this.state = {
-            firstName: null
+            firstName: null,
+            firstNameIsLoading: false,
+            sessions: null,
+            sessionsIsLoading: false
         }
     }
 
-    componentDidMount() {
+    async componentDidMount() {
         fetchData(12).then(data => {
-            // console.log("data :", data)
-            this.setState({firstName: data.userInfos.firstName})
+            this.setState({firstName: data.userInfos.firstName, firstNameIsLoading: true})
+        })
+        fetchData(12, "activity").then(data => {
+             this.setState({sessions: data.sessions, sessionsIsLoading: true})
         })
       }
 
@@ -26,7 +32,8 @@ export class Home extends React.Component {
         return(
             <>
             <section className="home">
-                <HeaderHome firstName={this.state.firstName}/>
+                {this.state.firstNameIsLoading ? <HeaderHome firstName={this.state.firstName}/> : ""}
+                {this.state.sessionsIsLoading ? <ActivityChart sessions={this.state.sessions}/> : ""}
             </section>
             </>
         )
