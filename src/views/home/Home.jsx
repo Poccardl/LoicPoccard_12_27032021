@@ -5,7 +5,7 @@ import fetchData from '../../fetchData.js'
 
 // Components import
 import { HeaderHome } from '../../components/header_home/HeaderHome.jsx'
-import { ActivityChart } from '../../components/dayli_chart/ActivityChart.jsx'
+import { ActivityChart } from '../../components/activity_chart/ActivityChart.jsx'
 
 export class Home extends React.Component {
 
