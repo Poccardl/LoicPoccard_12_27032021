@@ -6,7 +6,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 export class AverageDuration extends React.Component {
 
     render() {
-        console.log(this.props.average)
+        // console.log(this.props.average)
         return (
             <>
             <div className="average_duration_chart">
