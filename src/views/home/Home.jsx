@@ -7,7 +7,7 @@ import fetchData from '../../fetchData.js'
 import { HeaderHome } from '../../components/header_home/HeaderHome.jsx'
 import { ActivityChart } from '../../components/activity_chart/ActivityChart.jsx'
 import { AverageDuration } from '../../components/average_duration_chart/AverageDuration.jsx'
-import { RadialBarChart } from '../../components/radial_bar_chart/RadialBarChart.jsx'
+import { RadarBarChart } from '../../components/radar_bar_chart/RadarBarChart.jsx'
 
 export class Home extends React.Component {
 
@@ -45,9 +45,16 @@ export class Home extends React.Component {
             <>
             <section className="home">
                 {this.state.firstNameIsLoading ? <HeaderHome firstName={this.state.firstName}/> : ""}
-                {this.state.sessionsIsLoading ? <ActivityChart sessions={this.state.sessions}/> : ""}
-                {this.state.averageIsLoading ? <AverageDuration average={this.state.average}/> : ""}
-                {this.state.performanceIsLoading ? <RadialBarChart performance={this.state.performance}/> : ""}
+                <div className="charts">
+                    <div>
+                        {this.state.sessionsIsLoading ? <ActivityChart sessions={this.state.sessions}/> : ""}
+                    </div>
+                    <div className="charts_part_2">
+                        {this.state.averageIsLoading ? <AverageDuration average={this.state.average}/> : ""}
+                        {this.state.performanceIsLoading ? <RadarBarChart performance={this.state.performance}/> : ""}
+                    </div>
+                </div>
+                {/* <div className="">INFOS CLEFS</div> */}
             </section>
             </>
         )

@@ -1,3 +1,13 @@
 .home {
     margin: 20px 40px 20px 120px;
+    h2 {
+        font-size: 12px;
+    }
+    .charts {
+        display: flex;
+        flex-direction: column;
+        .charts_part_2 {
+            display: flex;
+        }
+    }
 }

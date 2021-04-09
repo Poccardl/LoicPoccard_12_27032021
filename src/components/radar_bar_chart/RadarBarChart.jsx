@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts'
 
-export class RadialBarChart extends React.Component {
+export class RadarBarChart extends React.Component {
 
     constructor(props) {
         super(props)
@@ -40,6 +40,6 @@ export class RadialBarChart extends React.Component {
     }
 }
 
-RadialBarChart.propTypes = {
+RadarBarChart.propTypes = {
     average: PropTypes.array
 }
