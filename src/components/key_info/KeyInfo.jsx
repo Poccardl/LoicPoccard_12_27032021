@@ -11,7 +11,7 @@ export class KeyInfo extends React.Component {
     render() {
         return (
             <>
-            <div className="card_keyinfo top">
+            <div className="card_keyinfo">
                 <img className="icon" src={caloeries_icon} alt=""/>
                 <div>
                     <p>{this.props.data.calorieCount / 1000}kCal</p>
@@ -32,7 +32,7 @@ export class KeyInfo extends React.Component {
                     <span>Glucides</span>
                 </div>
             </div>
-            <div className="card_keyinfo bottom">
+            <div className="card_keyinfo">
                 <img className="icon" src={fat_icon} alt=""/>
                 <div>
                     <p>{this.props.data.lipidCount}g</p>
