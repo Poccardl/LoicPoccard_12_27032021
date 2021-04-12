@@ -9,6 +9,7 @@ import { ActivityChart } from '../../components/activity_chart/ActivityChart.jsx
 import { AverageDuration } from '../../components/average_duration_chart/AverageDuration.jsx'
 import { RadarBarChart } from '../../components/radar_bar_chart/RadarBarChart.jsx'
 import { GoalChart } from '../../components/goal_chart/GoalChart.jsx'
+import { KeyInfo } from '../../components/key_info/KeyInfo.jsx'
 
 export class Home extends React.Component {
 
@@ -24,13 +25,15 @@ export class Home extends React.Component {
             performance: null,
             performanceIsLoading: false,
             goal: null,
-            goalIsLoading: false
+            goalIsLoading: false,
+            keyData: null,
+            keyIsLoading: false
         }
     }
 
     async componentDidMount() {
         fetchData(12).then(data => {
-            this.setState({firstName: data.userInfos.firstName, firstNameIsLoading: true, goal: data.todayScore, goalIsLoading: true})
+            this.setState({firstName: data.userInfos.firstName, firstNameIsLoading: true, goal: data.todayScore, goalIsLoading: true, keyData: data.keyData, keyIsLoading: true})
         })
         fetchData(12, "activity").then(data => {
              this.setState({sessions: data.sessions, sessionsIsLoading: true})
@@ -58,7 +61,9 @@ export class Home extends React.Component {
                         {this.state.goalIsLoading ? <GoalChart goal={this.state.goal}/> : ""}
                     </div>
                 </div>
-                {/* <div className="">INFOS CLEFS</div> */}
+                <div className="key_info">
+                    {this.state.keyIsLoading ? <KeyInfo data={this.state.keyData} /> : ""}
+                </div>
             </section>
             </>
         )
