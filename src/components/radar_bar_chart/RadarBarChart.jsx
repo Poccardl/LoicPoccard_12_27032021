@@ -41,5 +41,5 @@ export class RadarBarChart extends React.Component {
 }
 
 RadarBarChart.propTypes = {
-    average: PropTypes.array
+    performance: PropTypes.object
 }

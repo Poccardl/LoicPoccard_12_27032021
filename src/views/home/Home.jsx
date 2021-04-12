@@ -8,6 +8,7 @@ import { HeaderHome } from '../../components/header_home/HeaderHome.jsx'
 import { ActivityChart } from '../../components/activity_chart/ActivityChart.jsx'
 import { AverageDuration } from '../../components/average_duration_chart/AverageDuration.jsx'
 import { RadarBarChart } from '../../components/radar_bar_chart/RadarBarChart.jsx'
+import { GoalChart } from '../../components/goal_chart/GoalChart.jsx'
 
 export class Home extends React.Component {
 
@@ -21,13 +22,15 @@ export class Home extends React.Component {
             average: null,
             averageIsLoading: false,
             performance: null,
-            performanceIsLoading: false
+            performanceIsLoading: false,
+            goal: null,
+            goalIsLoading: false
         }
     }
 
     async componentDidMount() {
         fetchData(12).then(data => {
-            this.setState({firstName: data.userInfos.firstName, firstNameIsLoading: true})
+            this.setState({firstName: data.userInfos.firstName, firstNameIsLoading: true, goal: data.todayScore, goalIsLoading: true})
         })
         fetchData(12, "activity").then(data => {
              this.setState({sessions: data.sessions, sessionsIsLoading: true})
@@ -52,6 +55,7 @@ export class Home extends React.Component {
                     <div className="charts_part_2">
                         {this.state.averageIsLoading ? <AverageDuration average={this.state.average}/> : ""}
                         {this.state.performanceIsLoading ? <RadarBarChart performance={this.state.performance}/> : ""}
+                        {this.state.goalIsLoading ? <GoalChart goal={this.state.goal}/> : ""}
                     </div>
                 </div>
                 {/* <div className="">INFOS CLEFS</div> */}
