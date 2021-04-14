@@ -6,7 +6,8 @@ export class HeaderHome extends React.Component {
     render() {
         return (
             <>
-            <h1>Bonjour {this.props.firstName}</h1>
+            <h1>Bonjour <span className="red">{this.props.firstName}</span></h1>
+            <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
             </>
         )
     }

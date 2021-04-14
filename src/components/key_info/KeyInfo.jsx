@@ -13,28 +13,28 @@ export class KeyInfo extends React.Component {
             <>
             <div className="card_keyinfo">
                 <img className="icon" src={caloeries_icon} alt=""/>
-                <div>
+                <div className="keyinfo_content">
                     <p>{this.props.data.calorieCount / 1000}kCal</p>
                     <span>Calories</span>
                 </div>
             </div>
             <div className="card_keyinfo">
                 <img className="icon" src={protein_icon} alt=""/>
-                <div>
+                <div className="keyinfo_content">
                     <p>{this.props.data.proteinCount}g</p>
                     <span>Proteines</span>
                 </div>
             </div>
             <div className="card_keyinfo">
                 <img className="icon" src={carbs_icon} alt=""/>
-                <div>
+                <div className="keyinfo_content">
                     <p>{this.props.data.carbohydrateCount}g</p>
                     <span>Glucides</span>
                 </div>
             </div>
             <div className="card_keyinfo">
                 <img className="icon" src={fat_icon} alt=""/>
-                <div>
+                <div className="keyinfo_content">
                     <p>{this.props.data.lipidCount}g</p>
                     <span>Lipides</span>
                 </div>

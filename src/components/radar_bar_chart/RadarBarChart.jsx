@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts'
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer } from 'recharts'
 
 export class RadarBarChart extends React.Component {
 
@@ -25,12 +25,11 @@ export class RadarBarChart extends React.Component {
     render() {
         return (
             <>
-            <div className="radial_bar_chart">
+            <div className="radar_bar_chart">
                 <ResponsiveContainer width="100%" height="100%">
-                    <RadarChart cx="50%" cy="50%" outerRadius="80%" data={this.state.data}>
+                    <RadarChart cx="50%" cy="50%" outerRadius="70%" data={this.state.data}>
                         <PolarGrid/>
-                        <PolarAngleAxis dataKey="kind"/>
-                        <PolarRadiusAxis/>
+                        <PolarAngleAxis stroke="white" dataKey="kind"/>
                         <Radar dataKey="value" fill="#FF0101" fillOpacity={0.6}/>
                     </RadarChart>
                 </ResponsiveContainer>
