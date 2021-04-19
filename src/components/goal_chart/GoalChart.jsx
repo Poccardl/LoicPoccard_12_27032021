@@ -27,7 +27,7 @@ export class GoalChart extends React.Component {
             <div className="goal_chart">
                 <h2 className="goal_title">Score</h2>
                 <PieChart width={200} height={200}>
-                    <Pie data={this.state.data} startAngle={90} endAngle={400} innerRadius={50} outerRadius={60} fill="#8884d8" paddingAngle={5} dataKey="score">
+                    <Pie data={this.state.data} startAngle={90} endAngle={90 + this.state.goal} innerRadius={50} outerRadius={60} fill="#8884d8" paddingAngle={5} dataKey="score">
                         <Cell fill="red"/>
                     </Pie>
                 </PieChart>

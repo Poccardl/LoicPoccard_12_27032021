@@ -1,9 +1,20 @@
 .activity_chart {
+    position: relative;
     height: 200px;
     background: $color-secondary;
+    border-radius: 5px;
+    h2 {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
 }
 .daily_chart_tooltip {
     background-color: $color-primary;
     color: white;
-    font-size: 10px;
+    font-size: 8px;
+    padding: 2.5px;
+    p {
+        padding: 2.5px;
+    }
 }
