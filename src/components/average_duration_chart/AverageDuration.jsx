@@ -42,8 +42,8 @@ export class AverageDuration extends React.Component {
                 <ResponsiveContainer width="100%" height="99%">
                     <LineChart data={this.props.average}>
                         <Tooltip wrapperStyle={{left: -10 }} cursor={{ stroke: "rgba(0, 0, 0, 0.1)", strokeWidth: 100}} content={<CustomTooltip />}/>
-                        <XAxis tickLine={false} axisLine={false} stroke="white" dataKey="day" />
-                        <Line type="monotone" dataKey="sessionLength" stroke="white" dot=""/>
+                        <XAxis tick={{opacity: 0.5}} tickLine={false} axisLine={false} stroke="white" dataKey="day" />
+                        <Line type="monotone" dataKey="sessionLength" stroke="white" strokeOpacity="0.5" dot=""/>
                     </LineChart>
                 </ResponsiveContainer>
             </div>
