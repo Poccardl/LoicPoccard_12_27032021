@@ -7,8 +7,8 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
  * Custom tooltip of BarChart
  * @date 2021-04-20
  * @param {object} {payload
- * @param {boolean} active}
- * @returns {Component}
+ * @param {boolean} active} - Content tooltip object
+ * @returns {Component} - React component
  */
 const CustomTooltip = ({payload, active}) => {
     if (active) {
@@ -27,8 +27,8 @@ const CustomTooltip = ({payload, active}) => {
 /**
  * Custom legend for the BarChart
  * @date 2021-04-19
- * @param {string} value
- * @returns {Component}
+ * @param {string} value - Legend value
+ * @returns {Component} - React component
  */
 const CustomLegendText = (value) => {
     return (

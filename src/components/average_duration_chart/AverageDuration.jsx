@@ -6,8 +6,8 @@ import { LineChart, XAxis, Line, Tooltip, ResponsiveContainer } from 'recharts';
  * Custom tooltip of LineChart
  * @date 2021-04-20
  * @param {object} {payload
- * @param {boolean} active}
- * @returns {Component}
+ * @param {boolean} active} - Content tooltip object
+ * @returns {Component} - React component
  */
 const CustomTooltip = ({payload, active}) => {
     if (active) {

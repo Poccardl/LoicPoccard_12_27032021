@@ -6,9 +6,9 @@
 /**
  * retrieves the information of the users of the application via an API using the "fetch" method
  * @date 2021-04-20
- * @param {string} id
- * @param {string} option
- * @returns {Promise}
+ * @param {string} id - User id
+ * @param {string} option - The optional route of the API request
+ * @returns {Promise} - Result of the request
  */
 const fetchData =  async (id, option) => {
     let url = option ? `http://localhost:3000/user/${id}/${option}` : `http://localhost:3000/user/${id}`
