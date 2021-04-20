@@ -1,9 +1,5 @@
 import React from 'react'
-
-// API import
 import fetchData from '../../fetchData.js'
-
-// Components import
 import { HeaderHome } from '../../components/header_home/HeaderHome.jsx'
 import { ActivityChart } from '../../components/activity_chart/ActivityChart.jsx'
 import { AverageDuration } from '../../components/average_duration_chart/AverageDuration.jsx'
@@ -62,7 +58,7 @@ export class Home extends React.Component {
                     </div>
                 </div>
                 <div className="key_info">
-                    {this.state.keyIsLoading ? <KeyInfo data={this.state.keyData} /> : ""}
+                    {this.state.keyIsLoading ? <KeyInfo keyData={this.state.keyData} /> : ""}
                 </div>
             </section>
             </>

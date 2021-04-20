@@ -1,7 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
-// recharts import
 import { PieChart, Pie, Cell } from 'recharts';
 
 export class GoalChart extends React.Component {
@@ -17,6 +15,7 @@ export class GoalChart extends React.Component {
 
     componentDidMount() {
         let goal = this.props.goal
+        // update the state
         this.setState({data: [{name: "score", score: goal}], goal: goal, goalIsLoading: true})
     }
 

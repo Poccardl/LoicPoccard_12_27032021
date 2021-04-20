@@ -1,6 +1,4 @@
 import React from 'react'
-
-// svg import
 import icon_sport_1 from '../../assets/img/icon_sport_1.png'
 import icon_sport_2 from '../../assets/img/icon_sport_2.png'
 import icon_sport_3 from '../../assets/img/icon_sport_3.png'

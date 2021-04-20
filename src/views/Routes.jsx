@@ -1,11 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-
-// Views import
 import { Home } from './home/Home.jsx'
 import { Error404 } from '../views/Error404.jsx'
-
-// Components import
 import { Header } from '../components/header/Header.jsx'
 import { VerticalNavbar } from '../components/vertical_navbar/VerticalNavbar.jsx'
 

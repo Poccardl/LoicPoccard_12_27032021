@@ -3,6 +3,13 @@
 // http://localhost:3000/user/${userId}/average-sessions
 // http://localhost:3000/user/${userId}/performance
 
+/**
+ * retrieves the information of the users of the application via an API using the "fetch" method
+ * @date 2021-04-20
+ * @param {string} id
+ * @param {string} option
+ * @returns {Promise}
+ */
 const fetchData =  async (id, option) => {
     let url = option ? `http://localhost:3000/user/${id}/${option}` : `http://localhost:3000/user/${id}`
     let response = await fetch(url)

@@ -1,9 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
 import { LineChart, XAxis, Line, Tooltip, ResponsiveContainer } from 'recharts';
 
-const CustomTooltip = ({payload, label, active}) => {
+/**
+ * Custom tooltip of LineChart
+ * @date 2021-04-20
+ * @param {object} {payload
+ * @param {boolean} active}
+ * @returns {Component}
+ */
+const CustomTooltip = ({payload, active}) => {
     if (active) {
         return (
             <>

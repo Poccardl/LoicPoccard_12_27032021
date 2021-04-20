@@ -1,9 +1,5 @@
 import React from 'react'
-
-
-// svg import
 import logo from '../../assets/img/sportSee_logo.png'
-
 
 export class Header extends React.Component {
 

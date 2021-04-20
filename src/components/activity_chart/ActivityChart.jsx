@@ -1,11 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
-// recharts import
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts'
 
 
-const CustomTooltip = ({payload, label, active}) => {
+/**
+ * Custom tooltip of BarChart
+ * @date 2021-04-20
+ * @param {object} {payload
+ * @param {boolean} active}
+ * @returns {Component}
+ */
+const CustomTooltip = ({payload, active}) => {
     if (active) {
         return (
             <>
@@ -19,11 +24,19 @@ const CustomTooltip = ({payload, label, active}) => {
     return null
 }
 
+/**
+ * Custom legend for the BarChart
+ * @date 2021-04-19
+ * @param {string} value
+ * @returns {Component}
+ */
 const CustomLegendText = (value) => {
     return (
+        <>
         <span style={{ color: "#74798C" }}>{value}</span>
+        </>
     )
-  }
+}
 
 export class ActivityChart extends React.Component {
 
