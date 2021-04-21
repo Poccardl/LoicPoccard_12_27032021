@@ -1,3 +1,9 @@
 @mixin font_primary {
     font-family: 'Roboto', sans-serif;
 }
+
+@mixin desktop {
+    @media (min-width: $bp-desktop) {
+        @content;
+    }
+}

@@ -5,6 +5,10 @@
     background-color: #FF0000;
     color: white;
     border-radius: 5px;
+    @include desktop {
+        width: 300px;
+        height: 300px;
+    }
     h2 {
         opacity: 0.5;
         position: absolute;

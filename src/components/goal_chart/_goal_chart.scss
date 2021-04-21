@@ -6,6 +6,10 @@
     height: 200px;
     background-color: $color-secondary;
     border-radius: 5px;
+    @include desktop {
+        width: 300px;
+        height: 300px;
+    }
     .goal_title {
         position: absolute;
         top: 25px;
@@ -15,6 +19,9 @@
         text-align: center;
         position: absolute;
         top: 60px;
+        @include desktop {
+            top: 100px;
+        }
         .percentage {
             font-size: 18px;
             margin-bottom: 5px;
