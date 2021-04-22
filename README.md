@@ -10,24 +10,13 @@ Creation of a profile page with [React](https://reactjs.org/). This page integra
 ## 2. Getting Started
 
 ### 2.2 Installation
-* Clone this repository on your computer
-  ```console
-    git clone https://github.com/Poccardl/LoicPoccard_12_27032021.git
-    ```
-* Go to the project folder
-    ```console
-    cd LoicPoccard_12_27032021
-    ```
-* Install all dependencies of you need for run this project
-    ```console
-    npm install
-    ```
+* Clone this repository on your computer `git clone https://github.com/Poccardl/LoicPoccard_12_27032021.git`
+* Go to the project folder `cd LoicPoccard_12_27032021`
+* Install all dependencies of you need for run this project `npm install`
 
 ### 2.3 Run the project
 * Run project
-    ```console
-    npm start
-    ```
+    `npm start`
 * Open your browther ([localhost:3000](http://localhost:3000/) port by default)
 
 
