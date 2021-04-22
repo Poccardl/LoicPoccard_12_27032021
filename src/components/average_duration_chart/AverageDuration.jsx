@@ -25,6 +25,7 @@ const CustomTooltip = ({payload, active}) => {
 export class AverageDuration extends React.Component {
 
     componentDidMount() {
+        // replace the number index with the day index
         const days = {1: "L", 2: "M", 3: "M", 4: "J", 5: "V", 6: "S", 7: "D"}
         let average = this.props.average
         for (let element of average) {
