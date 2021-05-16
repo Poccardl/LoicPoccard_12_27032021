@@ -4,7 +4,7 @@ Creation of a profile page with [React](https://reactjs.org/). This page integra
 
 ## 1. Prerequisites
 * You need [Node.js](https://nodejs.org/en/) for use npm
-* You nedd [Git](https://git-scm.com/) for clone this repository
+* You need [Git](https://git-scm.com/) for clone this repository
 
 
 ## 2. Getting Started
